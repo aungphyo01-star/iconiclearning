@@ -6,7 +6,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	
-	[Theme Colors Modified to Deep Green (#093939) and Crimson Red (#D32F2F)]
+	[Color Theme fully customized to Deep Green (#093939) and Crimson Red (#D32F2F) for Iconic Learning Centre]
 */
 
 /* Reset */
@@ -106,12 +106,12 @@
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e54747;
+		color: #D32F2F; /* Crimson Red Links */
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #D32F2F !important; /* Accent Red on Hover */
+			color: #ffffff !important;
 			border-bottom-color: transparent;
 		}
 
@@ -230,7 +230,52 @@
 		text-align: right;
 	}
 
-/* Row & Columns System (Keep original layouts intact) */
+/* Container */
+
+	.container {
+		margin: 0 auto;
+		max-width: calc(100% - 3em);
+		width: 68em;
+	}
+
+		.container.ltr {
+			direction: ltr;
+		}
+
+		@media screen and (max-width: 1680px) {
+
+			.container {
+				width: 68em;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.container {
+				width: 100%;
+				max-width: calc(100% - 3em);
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.container {
+				max-width: calc(100% - 4em);
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.container {
+				max-width: calc(100% - 3em);
+			}
+
+		}
+
+/* Grid System */
 
 	.row {
 		display: flex;
@@ -269,7 +314,67 @@
 		.col-11 { width: 91.66667%; }
 		.col-12 { width: 100%; }
 
-/* Form Elements */
+		@media screen and (max-width: 980px) {
+
+			.row { margin-top: -1.25em; margin-left: -1.25em; }
+			.row > * { padding: 1.25em 0 0 1.25em; }
+			.row.gtr-0 { margin-top: 0px; margin-left: 0px; }
+			.row.gtr-0 > * { padding: 0px 0 0 0px; }
+			.row.gtr-25 { margin-top: -0.3125em; margin-left: -0.3125em; }
+			.row.gtr-25 > * { padding: 0.3125em 0 0 0.3125em; }
+			.row.gtr-50 { margin-top: -0.625em; margin-left: -0.625em; }
+			.row.gtr-50 > * { padding: 0.625em 0 0 0.625em; }
+			.row.gtr-150 { margin-top: -1.875em; margin-left: -1.875em; }
+			.row.gtr-150 > * { padding: 1.875em 0 0 1.875em; }
+			.row.gtr-200 { margin-top: -2.5em; margin-left: -2.5em; }
+			.row.gtr-200 > * { padding: 2.5em 0 0 2.5em; }
+
+			.col-1-m { width: 8.33333%; }
+			.col-2-m { width: 16.66667%; }
+			.col-3-m { width: 25%; }
+			.col-4-m { width: 33.33333%; }
+			.col-5-m { width: 41.66667%; }
+			.col-6-m { width: 50%; }
+			.col-7-m { width: 58.33333%; }
+			.col-8-m { width: 66.66667%; }
+			.col-9-m { width: 75%; }
+			.col-10-m { width: 83.33333%; }
+			.col-11-m { width: 91.66667%; }
+			.col-12-m { width: 100%; }
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.row { margin-top: -1em; margin-left: -1em; }
+			.row > * { padding: 1em 0 0 1em; }
+			.row.gtr-0 { margin-top: 0px; margin-left: 0px; }
+			.row.gtr-0 > * { padding: 0px 0 0 0px; }
+			.row.gtr-25 { margin-top: -0.25em; margin-left: -0.25em; }
+			.row.gtr-25 > * { padding: 0.25em 0 0 0.25em; }
+			.row.gtr-50 { margin-top: -0.5em; margin-left: -0.5em; }
+			.row.gtr-50 > * { padding: 0.5em 0 0 0.5em; }
+			.row.gtr-150 { margin-top: -1.5em; margin-left: -1.5em; }
+			.row.gtr-150 > * { padding: 1.5em 0 0 1.5em; }
+			.row.gtr-200 { margin-top: -2em; margin-left: -2em; }
+			.row.gtr-200 > * { padding: 2em 0 0 2em; }
+
+			.col-1-mobile { width: 8.33333%; }
+			.col-2-mobile { width: 16.66667%; }
+			.col-3-mobile { width: 25%; }
+			.col-4-mobile { width: 33.33333%; }
+			.col-5-mobile { width: 41.66667%; }
+			.col-6-mobile { width: 50%; }
+			.col-7-mobile { width: 58.33333%; }
+			.col-8-mobile { width: 66.66667%; }
+			.col-9-mobile { width: 75%; }
+			.col-10-mobile { width: 83.33333%; }
+			.col-11-mobile { width: 91.66667%; }
+			.col-12-mobile { width: 100%; }
+
+		}
+
+/* Form */
 
 	form {
 		margin: 0 0 2em 0;
@@ -288,6 +393,10 @@
 	input[type="email"],
 	select,
 	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
 		-moz-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -308,7 +417,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #D32F2F; /* Focus Crimson */
+			border-color: #D32F2F; /* Crimson Red Focus */
 			box-shadow: 0 0 0 1px #D32F2F;
 		}
 
@@ -341,195 +450,62 @@
 		padding: 0.75em 1em;
 	}
 
-/* Buttons Theme Crimson Red (#D32F2F) */
+/* Box */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		background-color: #D32F2F; /* Crimson Red Base */
+	.box {
 		border-radius: 4px;
-		border: 0;
-		color: #ffffff !important;
-		cursor: pointer;
-		display: inline-block;
-		font-weight: 300;
-		height: 3em;
-		line-height: 3em;
-		padding: 0 2.5em;
-		text-align: center;
+		border: solid 1px rgba(255, 255, 255, 0.15);
+		margin-bottom: 2em;
+		padding: 1.5em;
+	}
+
+		.box > :last-child,
+		.box > :last-child > :last-child,
+		.box > :last-child > :last-child > :last-child {
+			margin-bottom: 0;
+		}
+
+		.box.alt {
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+		}
+
+/* Icon */
+
+	.icon {
 		text-decoration: none;
-		white-space: nowrap;
+		border-bottom: none;
+		position: relative;
 	}
 
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
-		.button:hover {
-			background-color: #b22222; /* Darker red hover */
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
 		}
 
-		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		.button.primary {
-			background-color: #093939; /* Deep Green for Secondary primary action */
-			color: #ffffff !important;
+		.icon > .label {
+			display: none;
 		}
 
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			.button.primary:hover {
-				background-color: #0d5353;
-			}
-
-/* Spotlights Backgrounds with Deep Green */
-
-	.spotlight {
-		background-color: #093939; /* Deep Green Spotlights */
-		color: rgba(255, 255, 255, 0.75);
-	}
-
-		.spotlight.style1 {
-			background-color: #062828; /* Slightly darker green tone */
+		.icon.solid:before {
+			font-weight: 900;
 		}
 
-/* Banner Styling */
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
 
-	#banner {
-		background-attachment: scroll, fixed;
-		background-color: #093939; /* Deep Green Overlay */
-		background-image: linear-gradient(135deg, rgba(9, 57, 57, 0.85), rgba(6, 40, 40, 0.9)), url("../../images/banner.jpg");
-		background-position: top left, center center;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
-		color: rgba(255, 255, 255, 0.75);
-		padding: 14em 0 14em 0;
-		text-align: center;
-	}
-
-/* Header Navbar Theme Deep Green */
-
-	#header {
-		background: #093939; /* Deep Green Nav Bar */
-		color: rgba(255, 255, 255, 0.75);
-		height: 3.5em;
-		left: 0;
-		line-height: 3.5em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
-	}
-
-/* Keep rest of layout styling unchanged to prevent formatting breaks */
-	#page-wrapper {
-		padding-top: 3.5em;
-	}
-
-	.container {
-		margin: 0 auto;
-		max-width: calc(100% - 3em);
-		width: 68em;
-	}
-
-	#footer {
-		background: #062828;
-		padding: 6em 0;
-		text-align: center;
-	}
-
-/* ==========================================
-   ICONIC LEARNING CENTRE - CUSTOM COLOR THEME
-   (Deep Green & Crimson Red Overrides)
-   ========================================== */
-
-/* --- Primary Accents & Buttons (Crimson Red) --- */
-input[type="submit"].primary,
-input[type="reset"].primary,
-input[type="button"].primary,
-.button.primary {
-    background-color: #D32F2F !important;
-    box-shadow: none !important;
-    color: #ffffff !important;
-}
-
-input[type="submit"].primary:hover,
-input[type="reset"].primary:hover,
-input[type="button"].primary:hover,
-.button.primary:hover {
-    background-color: #B71C1C !important; /* ပိုရင့်သော အနီရောင် */
-}
-
-a {
-    color: #D32F2F;
-    border-bottom-color: rgba(211, 47, 47, 0.5);
-}
-
-a:hover {
-    color: #B71C1C;
-    border-bottom-color: #B71C1C;
-}
-
-/* --- Navigation Header & Footer (Deep Green) --- */
-#header {
-    background-color: #093939 !important;
-}
-
-#nav > ul > li > a.button.primary {
-    background-color: #D32F2F !important;
-}
-
-#nav > ul > li > a.button.primary:hover {
-    background-color: #B71C1C !important;
-}
-
-#footer {
-    background-color: #052626 !important; /* Deep Green ထက် အနည်းငယ် ပိုရင့်သော နောက်ခံ */
-}
-
-/* --- Banner & Spotlights (Deep Green Base overlay) --- */
-#banner {
-    background-color: #093939 !important;
-}
-
-#banner:after {
-    background-color: rgba(9, 57, 57, 0.75) !important; /* Green Overlay */
-}
-
-.spotlight.style1 .content {
-    background-color: #093939 !important;
-}
-
-.spotlight.style1:after {
-    background-color: rgba(9, 57, 57, 0.5) !important;
-}
-
-/* --- Dropdown Menu (Nav Panel) --- */
-.dropotron {
-    background: #093939 !important;
-}
-
-.dropotron li:hover > a {
-    background: #D32F2F !important;
-    color: #ffffff !important;
-}
-
-/* Icon custom colors */
-.icon.major {
-    color: #D32F2F !important;
-    border-color: #D32F2F !important;
-}
-
-.icon.major:after {
-    background-color: rgba(211, 47, 47, 0.1) !important;
-}
+		.icon.major {
+			-moz-transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-
