@@ -447,3 +447,89 @@
 		padding: 6em 0;
 		text-align: center;
 	}
+
+/* ==========================================
+   ICONIC LEARNING CENTRE - CUSTOM COLOR THEME
+   (Deep Green & Crimson Red Overrides)
+   ========================================== */
+
+/* --- Primary Accents & Buttons (Crimson Red) --- */
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+.button.primary {
+    background-color: #D32F2F !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+.button.primary:hover {
+    background-color: #B71C1C !important; /* ပိုရင့်သော အနီရောင် */
+}
+
+a {
+    color: #D32F2F;
+    border-bottom-color: rgba(211, 47, 47, 0.5);
+}
+
+a:hover {
+    color: #B71C1C;
+    border-bottom-color: #B71C1C;
+}
+
+/* --- Navigation Header & Footer (Deep Green) --- */
+#header {
+    background-color: #093939 !important;
+}
+
+#nav > ul > li > a.button.primary {
+    background-color: #D32F2F !important;
+}
+
+#nav > ul > li > a.button.primary:hover {
+    background-color: #B71C1C !important;
+}
+
+#footer {
+    background-color: #052626 !important; /* Deep Green ထက် အနည်းငယ် ပိုရင့်သော နောက်ခံ */
+}
+
+/* --- Banner & Spotlights (Deep Green Base overlay) --- */
+#banner {
+    background-color: #093939 !important;
+}
+
+#banner:after {
+    background-color: rgba(9, 57, 57, 0.75) !important; /* Green Overlay */
+}
+
+.spotlight.style1 .content {
+    background-color: #093939 !important;
+}
+
+.spotlight.style1:after {
+    background-color: rgba(9, 57, 57, 0.5) !important;
+}
+
+/* --- Dropdown Menu (Nav Panel) --- */
+.dropotron {
+    background: #093939 !important;
+}
+
+.dropotron li:hover > a {
+    background: #D32F2F !important;
+    color: #ffffff !important;
+}
+
+/* Icon custom colors */
+.icon.major {
+    color: #D32F2F !important;
+    border-color: #D32F2F !important;
+}
+
+.icon.major:after {
+    background-color: rgba(211, 47, 47, 0.1) !important;
+}
